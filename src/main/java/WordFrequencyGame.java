@@ -3,17 +3,12 @@ import java.util.*;
 public class WordFrequencyGame {
     public String getResult(String inputStr) {
 
-        if (inputStr.split("\\s+").length == 1) {
-            return inputStr + " 1";
-        } else {
-
-            try {
-                List<Word> words = getTexts(inputStr);
-                words = getWords(words);
-                return buildResult(words);
-            } catch (Exception e) {
-                return "Calculate Error";
-            }
+       try {
+            List<Word> words = getTexts(inputStr);
+            words = getWords(words);
+            return buildResult(words);
+        } catch (Exception e) {
+            return "Calculate Error";
         }
     }
 
